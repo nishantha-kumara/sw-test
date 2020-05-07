@@ -7,17 +7,12 @@ class App extends Component {
     search: null,
   };
 
-  componentDidMount() {
-    console.log(users);
-  }
-
   searchSpace = (event) => {
     let keyword = event.target.value;
     this.setState({ search: keyword });
   };
 
   searchText = (text) => {
-    // console.log(text.organization);
     let status = false;
     if (text.name.toLowerCase().includes(this.state.search.toLowerCase())) {
       status = true;
