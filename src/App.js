@@ -14,9 +14,21 @@ class App extends Component {
 
   searchText = (text) => {
     let status = false;
-    if (text.name.toLowerCase().includes(this.state.search.toLowerCase())) {
+    /* if (text.name.toLowerCase().includes(this.state.search.toLowerCase())) {
       status = true;
     } else if (text.organizations.length > 0) {
+      status = text.organizations.map((org) =>
+        org.name.toLowerCase().includes(this.state.search.toLowerCase())
+      )[0];
+    } */
+
+    if (!status) {
+      status = text.name
+        .toLowerCase()
+        .includes(this.state.search.toLowerCase());
+    }
+
+    if (!status) {
       status = text.organizations.map((org) =>
         org.name.toLowerCase().includes(this.state.search.toLowerCase())
       )[0];
