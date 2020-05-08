@@ -8,4 +8,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Search resources
 
 You can search the resources using text box.
-(currently you can only search by users name or organizations. )
+
